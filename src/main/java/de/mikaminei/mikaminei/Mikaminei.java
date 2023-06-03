@@ -1,6 +1,10 @@
 package de.mikaminei.mikaminei;
 
 import com.mojang.logging.LogUtils;
+import de.mikaminei.mikaminei.item.ModCreativeModeTabs;
+import de.mikaminei.mikaminei.item.ModItems;
+import net.minecraft.world.item.CreativeModeTab;
+import net.minecraft.world.item.CreativeModeTabs;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.event.CreativeModeTabEvent;
@@ -23,7 +27,8 @@ public class Mikaminei {
     public Mikaminei() {
         IEventBus modEventBus = FMLJavaModLoadingContext.get().getModEventBus();
 
-        // Register the commonSetup method for modloading
+        ModItems.register(modEventBus);
+
         modEventBus.addListener(this::commonSetup);
         MinecraftForge.EVENT_BUS.register(this);
 
@@ -35,7 +40,10 @@ public class Mikaminei {
     }
 
     private void addCreative(CreativeModeTabEvent.BuildContents event) {
-
+        if(event.getTab() == ModCreativeModeTabs.MIKAMINEI) {
+            event.accept(ModItems.STEEL_INGOT);
+            event.accept(ModItems.RAW_STEEL);
+        }
     }
 
     @Mod.EventBusSubscriber(modid = MOD_ID, bus = Mod.EventBusSubscriber.Bus.MOD, value = Dist.CLIENT)
