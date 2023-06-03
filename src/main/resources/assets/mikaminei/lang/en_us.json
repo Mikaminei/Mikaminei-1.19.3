@@ -2,5 +2,9 @@
   "item.mikaminei.steel_ingot": "Steel Ingot",
   "item.mikaminei.raw_steel": "Raw Steel",
 
+  "block.mikaminei.steel_block": "Steel Block",
+  "block.mikaminei.steel_ore": "Steel Ore",
+  "block.mikaminei.deepslate_steel_ore": "Deepslate Steel Ore",
+
   "creativemodetab.mikaminei": "Mikaminei"
 }

@@ -1,0 +1,11 @@
+{
+  "type": "minecraft:blasting",
+  "group": "steel_ingot",
+  "category": "misc",
+  "ingredient": {
+    "item": "mikaminei:steel_ore"
+  },
+  "result": "mikaminei:steel_ingot",
+  "experience": 0.7,
+  "cookingtime": 200
+}

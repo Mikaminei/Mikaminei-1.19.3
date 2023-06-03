@@ -1,6 +1,7 @@
 package de.mikaminei.mikaminei;
 
 import com.mojang.logging.LogUtils;
+import de.mikaminei.mikaminei.block.ModBlocks;
 import de.mikaminei.mikaminei.item.ModCreativeModeTabs;
 import de.mikaminei.mikaminei.item.ModItems;
 import net.minecraft.world.item.CreativeModeTab;
@@ -28,6 +29,7 @@ public class Mikaminei {
         IEventBus modEventBus = FMLJavaModLoadingContext.get().getModEventBus();
 
         ModItems.register(modEventBus);
+        ModBlocks.register(modEventBus);
 
         modEventBus.addListener(this::commonSetup);
         MinecraftForge.EVENT_BUS.register(this);
@@ -43,6 +45,11 @@ public class Mikaminei {
         if(event.getTab() == ModCreativeModeTabs.MIKAMINEI) {
             event.accept(ModItems.STEEL_INGOT);
             event.accept(ModItems.RAW_STEEL);
+            event.accept(ModItems.STEEL_NUGGET);
+
+            event.accept(ModBlocks.STEEL_BLOCK);
+            event.accept(ModBlocks.STEEL_ORE);
+            event.accept(ModBlocks.DEEPSLATE_STEEL_ORE);
         }
     }
 

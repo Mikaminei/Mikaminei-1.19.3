@@ -1,0 +1,10 @@
+{
+  "item.mikaminei.steel_ingot": "Stahlbarren",
+  "item.mikaminei.raw_steel": "Rohstahl",
+
+  "block.mikaminei.steel_block": "Stahlblock",
+  "block.mikaminei.steel_ore": "Stahlerz",
+  "block.mikaminei.deepslate_steel_ore": "Tiefenschiefer Stahlerz",
+
+  "creativemodetab.mikaminei": "Mikaminei"
+}
